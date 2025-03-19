@@ -1,0 +1,27 @@
+name: Enhancement
+description: If you have issue with something
+title: " "
+labels: ["enhancement", "triage"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        General enhancement idea what we could implement
+  - type: input
+    id: what
+    attributes:
+      label: What could be improved
+      description: If there is some specific thing
+      placeholder: ex. js-resolvers
+    validations:
+      required: false
+
+  - type: textarea
+    id: what-change
+    attributes:
+      label: Which kinda change
+      description: What you would change?
+      placeholder: ...
+    validations:
+      required: true

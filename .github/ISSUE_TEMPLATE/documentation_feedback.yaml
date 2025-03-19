@@ -1,0 +1,23 @@
+name: Documentation Feedback
+description: Feedback form for documentation
+title: "[Docs]: "
+labels: ["documentation"]
+
+body:
+  - type: input
+    id: file
+    attributes:
+      label: Documentation file
+      description: Which documentation file
+      placeholder: README.md
+    validations:
+      required: false
+
+  - type: textarea
+    id: what-change
+    attributes:
+      label: Change
+      description: What you would change?
+      placeholder: ...
+    validations:
+      required: true
