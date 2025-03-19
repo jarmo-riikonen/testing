@@ -1,6 +1,6 @@
 name: Enhancement
 description: If you have issue with something
-title: " "
+title: "[Enhancement]: "
 labels: ["enhancement", "triage"]
 
 body:
