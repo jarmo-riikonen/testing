@@ -20,12 +20,10 @@ body:
   - type: textarea
     id: what-change
     attributes:
-      label: Which kinda change
-      description: What you would change?
+      label: What change?
+      description: What change you think we should implement to increase comfort of usage of AppSync / tools we have.
       placeholder: |
         xxx produces different result on local-api and AppSync.
-
-        or
 
         yyy is hard to use, can you make it simpler to use.
         Here is how I would like to use it:
