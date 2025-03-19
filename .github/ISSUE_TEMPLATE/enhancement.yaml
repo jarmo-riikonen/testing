@@ -6,7 +6,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        General enhancement idea what we could implement
+        General enhancement idea what we could implement.
+        Or something we could make easier to use so DX increases.
   - type: input
     id: what
     attributes:
@@ -21,6 +22,13 @@ body:
     attributes:
       label: Which kinda change
       description: What you would change?
-      placeholder: ...
+      placeholder: |
+        xxx produces different result on local-api and AppSync.
+
+        or
+
+        yyy is hard to use, can you make it simpler to use.
+        Here is how I would like to use it:
+        ...
     validations:
       required: true

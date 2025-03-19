@@ -18,6 +18,8 @@ body:
     attributes:
       label: Change
       description: What you would change?
-      placeholder: ...
+      placeholder: |
+        Documentation in xxx is little hard to understand, can you write quick steps
+        what I should do to get yyy to work.
     validations:
       required: true
