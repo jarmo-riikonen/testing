@@ -21,7 +21,7 @@ jobs:
   post_message:
     runs-on: ubuntu-latest
     needs: [test]
-    if: ${{ always() && contains(needs.*.result == 'failure') }}
+    if: ${{ always() && contains(needs.*.result, 'failure') }}
     steps:
       - name: Post message
         uses: slackapi/slack-github-action@v2.1.0
