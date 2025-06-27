@@ -21,7 +21,7 @@ jobs:
           method: chat.postMessage
           token: ${{ secrets.SLACK_OAUTH }}
           payload: |
-            channel: C092ZCWEL75
+            channel: C093CG3NLVA
             text: "Testing slack output"
             attachments:
             - fields:
@@ -33,4 +33,4 @@ jobs:
                 value: ${{ inputs.environment }}
               - title: "Link"
                 short: true
-                value: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                value: "<${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|Workflow>"
