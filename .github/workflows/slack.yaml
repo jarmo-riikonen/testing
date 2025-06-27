@@ -31,3 +31,6 @@ jobs:
               - title: "Environment"
                 short: true
                 value: ${{ inputs.environment }}
+              - title: "Link"
+                short: true
+                value: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
