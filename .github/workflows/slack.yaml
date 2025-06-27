@@ -28,3 +28,6 @@ jobs:
               - title: "Testing fields"
                 short: true
                 value: "Completed"
+              - title: "Environment"
+                short: true
+                value: ${{ inputs.environment }}
