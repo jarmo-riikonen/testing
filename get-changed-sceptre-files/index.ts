@@ -12,7 +12,7 @@ async function run() {
 	const pr = core.getInput("pr", { required: true });
 	const octokit = github.getOctokit(token);
 
-	const { data: pullRequest } = await octokit.rest.pulls.get({
+	const { data: pullRequest } = await octokit.rest.pulls.listFiles({
 		owner: owner,
 		repo: repository,
 		pull_number: Number(pr),

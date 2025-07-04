@@ -22694,7 +22694,7 @@ async function run() {
   const repository = import_core.default.getInput("repository", { required: true });
   const pr = import_core.default.getInput("pr", { required: true });
   const octokit = import_github.default.getOctokit(token);
-  const { data: pullRequest } = await octokit.rest.pulls.get({
+  const { data: pullRequest } = await octokit.rest.pulls.listFiles({
     owner,
     repo: repository,
     pull_number: Number(pr)
