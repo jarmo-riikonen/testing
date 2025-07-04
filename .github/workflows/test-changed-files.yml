@@ -13,6 +13,6 @@ jobs:
       - uses: ./get-changed-sceptre-files
         with:
           github-token: ${{ github.token }}
-          owner: ${{ github.owner }}
-          repository: ${{ github.repository }}
+          owner: ${{ github.event.repository.owner }}
+          repository: ${{ github.event.repository.name }}
           pr: ${{ github.event.number }}
