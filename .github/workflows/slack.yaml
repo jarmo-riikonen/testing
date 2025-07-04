@@ -1,0 +1,44 @@
+name: Slack test action
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        options:
+          - dev
+          - tst
+          - stg
+          - prd
+        description: Environment to deploy to dev/tst/stg/prd
+        required: true
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: One
+        run: |
+          exit 0
+  post_message:
+    runs-on: ubuntu-latest
+    needs: [test]
+    if: ${{ always() && contains(needs.*.result, 'failure') }}
+    steps:
+      - name: Post message
+        uses: slackapi/slack-github-action@v2.1.0
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.SLACK_OAUTH }}
+          payload: |
+            channel: C093CG3NLVA
+            text: "Testing slack output"
+            attachments:
+            - fields:
+              - title: "Testing fields"
+                short: true
+                value: "Completed"
+              - title: "Environment"
+                short: true
+                value: ${{ inputs.environment }}
+              - title: "Link"
+                short: true
+                value: "<${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|Workflow>"
