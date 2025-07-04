@@ -1,0 +1,21 @@
+name: Sceptre Changed
+description: Gets all changed files and outputs only sceptre changed files
+author: GraphQL Team
+
+inputs:
+  github-token:
+    required: true
+    description: github token
+  owner:
+    required: true
+    description: owner of repository
+  repository:
+    required: true
+    description: repository
+  pr:
+    required: true
+    description: pr number
+
+runs:
+  using: node20
+  main: ./index.js
